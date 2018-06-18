@@ -72,11 +72,17 @@ nmap , :
 " set leader
 let mapleader = " "
 
-" fast saving
-nmap <leader>fs :w<cr>
+" fast save
+nmap <leader>s :w<cr>
 
-" fast quitting
-nmap <leader>wq :q<cr>
+" fast quit
+nmap <leader>q :q<cr>
+
+" fast force quit
+nmap <leader>qq :q!<cr>
+
+" fast save/quit
+nmap <leader>wq :wq<cr>
 
 " clear highlight with leader
 nmap <leader>/ :noh<cr>
@@ -85,19 +91,20 @@ nmap <leader>/ :noh<cr>
 set backspace=eol,start,indent
 
 " splitting/windows
-nmap <leader>wh <C-W>h
-nmap <leader>wj <C-W>j
-nmap <leader>wk <C-W>k
-nmap <leader>wl <C-W>l
+nmap <leader>h <C-W>h
+nmap <leader>j <C-W>j
+nmap <leader>k <C-W>k
+nmap <leader>l <C-W>l
 nmap <leader>ww <C-w><C-w>
-nmap <leader>wH :split<cr>
-nmap <leader>wV :vsplit<cr>
+nmap <leader>H :split<cr>
+nmap <leader>V :vsplit<cr>
 
 " buffers
 nmap <leader>bn :bn<cr>
 nmap <leader>bp :bp<cr>
-nmap <leader>bb :b
+nmap <leader>bb :b 
 nmap <leader>bd :bd<cr>
+nmap <leader>e  :e 
 
 " shell commands
 nmap <leader><leader> :!
