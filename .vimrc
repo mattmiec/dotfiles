@@ -31,12 +31,9 @@ colorscheme solarized
 " tab completion
 Plugin 'ervandew/supertab'
 
-" fuzzy file finding, activate with :Files (remap to ;)
+" fuzzy file finding, activate with :FZF/Files
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-nmap <leader>f :Files 
-nmap ; :FZF<CR>
-nmap ;; :FZF~<CR>
 
 " closing brackets/parens across lines
 Plugin 'rstacruz/vim-closer'
@@ -80,11 +77,14 @@ filetype plugin indent on    " required
 
 " KEY REMAPPINGS
 
+" timeout milliseconds
+set timeoutlen=500
+
 " remap escape
 imap fd <Esc>
 
 " remap cmd prefix
-nmap , :
+nmap ; :
 
 " set leader
 let mapleader = " "
@@ -93,10 +93,10 @@ let mapleader = " "
 nmap <leader>s :w<cr>
 
 " fast quit
-nmap <leader>q :q<cr>
+nmap <leader>a :q<cr>
 
 " fast force quit
-nmap <leader>qq :q!<cr>
+nmap <leader>q :q!<cr>
 
 " fast save/quit
 nmap <leader>wq :wq<cr>
@@ -108,20 +108,22 @@ nmap <leader>/ :noh<cr>
 set backspace=eol,start,indent
 
 " splitting/windows
+set splitbelow
+set splitright
+nmap <leader>H :split<cr>
+nmap <leader>V :vsplit<cr>
 nmap <leader>h <C-W>h
 nmap <leader>j <C-W>j
 nmap <leader>k <C-W>k
 nmap <leader>l <C-W>l
 nmap <leader>ww <C-w><C-w>
-nmap <leader>H :split<cr>
-nmap <leader>V :vsplit<cr>
 
 " buffers
-nmap <leader>bn :bn<cr>
-nmap <leader>bp :bp<cr>
-nmap <leader>bb :b 
-nmap <leader>bd :bd<cr>
-nmap <leader>e  :e 
+nmap <leader>n :bn<cr>
+nmap <leader>p :bp<cr>
+nmap <leader>d :bd<cr>
+nmap <leader>b :b 
+nmap <leader>e :e 
 
 " shell commands
 nmap <leader>f :!
@@ -130,17 +132,19 @@ nmap <leader>ff :!!<cr>
 " beginning/end line
 nmap B ^
 nmap E $
+vmap B ^
+vmap E $
 
 " redo
-nmap <leader>r <C-R>
+nmap <leader>u <C-R>
 
 " move down/up by visual line
 nmap j gj
 nmap k gk
 
-" visual block enter/exit
-nmap vv <C-v>
-xmap vv <C-v>
+" scrolling
+nmap J 5<C-E>
+nmap K 5<C-Y>
 
 
 " INTERFACE/BEHAVIOR
@@ -220,7 +224,5 @@ set whichwrap+=<,>,h,l
 set showmatch
 set mat=2
 
-" no backups
+" no (permanent) backups
 set nobackup
-set nowb
-set noswapfile
