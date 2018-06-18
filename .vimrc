@@ -26,8 +26,14 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" tmux-complete (completion of words from other tmux panes/window with <C-X><C-U>)
-Plugin 'wellle/tmux-complete.vim'
+" tab completion
+Plugin 'ervandew/supertab'
+
+" fuzzy file finding, activate with :Files (remap to ;)
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+nmap ; :FZF<CR>
+nmap ;; :FZF~<CR>
 
 " closing brackets/parens across lines
 Plugin 'rstacruz/vim-closer'
@@ -52,11 +58,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " type open bracket or quote on selected region to surround (and more)
 Plugin 'tpope/vim-surround'
-
-" fuzzy file finding, activate with :Files (remap to ;)
-Plugin 'junegunn/fzf'
-nmap ; :Files<CR>
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

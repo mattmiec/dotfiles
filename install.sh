@@ -35,7 +35,7 @@ if [ ! -d "$HOME/.vim/colors" ]; then
     mkdir "$HOME/.vim/colors"
 fi
 if [ -e "$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim" ]; then
-    cp "$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim" "$HOME/.vim/colors/"
+    ln -sfv "$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim" "$HOME/.vim/colors/"
 fi
 if [ -e "$HOME/.vim/bundle/YouCompleteMe/install.py" ]; then
     "$HOME/.vim/bundle/YouCompleteMe/install.py"
