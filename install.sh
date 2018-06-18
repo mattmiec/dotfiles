@@ -8,10 +8,14 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 ### symlink dotfiles ###
-ln -sfv "$DOTFILES_DIR/.bashrc" ~
+# only symlink these on workstations
+if [ "$HOST" = "HOME" ] || [ "$HOST" = "LORENTZ" ]; then
+    ln -sfv "$DOTFILES_DIR/.bashrc" ~
+    ln -sfv "$DOTFILES_DIR/.profile" ~
+    ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
+fi
+# always symlink these
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~
-ln -sfv "$DOTFILES_DIR/.profile" ~
-ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
 
 ### setup vim plugins ###

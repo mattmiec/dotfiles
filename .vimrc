@@ -146,13 +146,11 @@ set ai
 set si
 set wrap
 
-" spaces instead of tabs
+" tabs/spaces
 "set expandtab
-
-" smart tabs
-  set smarttab
-  set softtabstop=4
-  set shiftwidth=4
+"set smarttab
+set softtabstop=4
+set shiftwidth=4
 
 " always show status line
 set laststatus=2
