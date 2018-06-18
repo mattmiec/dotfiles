@@ -8,13 +8,13 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 ### symlink dotfiles ###
-# only symlink these on workstations
-if [ "$HOST" = "HOME" ] || [ "$HOST" = "LORENTZ" ]; then
+# only symlink these on primary workstation
+if [ "$HOST" = "HOME" ]; then
     ln -sfv "$DOTFILES_DIR/.bashrc" ~
     ln -sfv "$DOTFILES_DIR/.profile" ~
-    ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
 fi
 # always symlink these
+ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
 
@@ -29,7 +29,6 @@ if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
     git clone "https://github.com/VundleVim/Vundle.vim.git" "$HOME/.vim/bundle/Vundle.vim"
 fi
 git --work-tree="$HOME/.vim/bundle/Vundle.vim" --git-dir="$HOME/.vim/bundle/Vundle.vim/.git" pull origin master
-vim +PluginClean
 vim +PluginInstall +qall
 if [ ! -d "$HOME/.vim/colors" ]; then
     mkdir "$HOME/.vim/colors"
