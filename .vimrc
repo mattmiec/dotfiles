@@ -50,8 +50,14 @@ Plugin 'tomtom/tcomment_vim'
 " jump to some word after pressing <leader><leader>w/b (forward/backward)
 Plugin 'easymotion/vim-easymotion'
 
-" show git modifications in gutter
+" git gutter display, control
 Plugin 'airblade/vim-gitgutter'
+autocmd VimEnter * nunmap <buffer> <leader>hp
+autocmd VimEnter * nunmap <buffer> <leader>hu
+autocmd VimEnter * nunmap <buffer> <leader>hs
+autocmd VimEnter * nmap  ghp <Plug>GitGutterPreviewHunk
+autocmd VimEnter * nmap  ghs <Plug>GitGutterUndoHunk
+autocmd VimEnter * nmap  ghu <Plug>GitGutterStageHunk
 
 " visual indentation indicators
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -121,8 +127,6 @@ nmap <leader>ww <C-w><C-w>
 " buffers
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
-nmap <leader>d :bd<cr>
-nmap <leader>b :b 
 nmap <leader>e :e 
 
 " shell commands
@@ -134,6 +138,8 @@ nmap B ^
 nmap E $
 vmap B ^
 vmap E $
+omap B ^
+omap E $
 
 " redo
 nmap <leader>u <C-R>
@@ -145,7 +151,6 @@ nmap k gk
 " scrolling
 nmap J 5<C-E>
 nmap K 5<C-Y>
-
 
 " INTERFACE/BEHAVIOR
 
