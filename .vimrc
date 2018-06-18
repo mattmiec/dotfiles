@@ -12,31 +12,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" solarized colorscheme
-Plugin 'altercation/vim-colors-solarized'
-syntax enable
-set background=dark
-colorscheme solarized
-
-" youcompleteme code-completion
-Plugin 'Valloric/YouCompleteMe'
-let g:ycm_show_diagnostics_ui = 0 "for compatibility with Syntastic
-
-" tmux-complete (completion of words from other tmux panes/window)
-Plugin 'wellle/tmux-complete.vim'
-let g:tmuxcomplete#trigger = 'omnifunc' "invoke with <C-X><C-O> (or <C-Space> with YCM?)
-
-" syntastic syntax checking
-Plugin 'vim-syntastic/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " airline status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -44,6 +19,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='base16_solarized'
+
+" solarized colorscheme
+Plugin 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+colorscheme solarized
+
+" tmux-complete (completion of words from other tmux panes/window)
+Plugin 'wellle/tmux-complete.vim'
+let g:tmuxcomplete#trigger = 'omnifunc' "invoke with <C-X><C-O> (or <C-Space> with YCM?)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
