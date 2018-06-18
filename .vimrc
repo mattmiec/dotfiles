@@ -26,9 +26,37 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" tmux-complete (completion of words from other tmux panes/window)
+" tmux-complete (completion of words from other tmux panes/window with <C-X><C-U>)
 Plugin 'wellle/tmux-complete.vim'
-let g:tmuxcomplete#trigger = 'omnifunc' "invoke with <C-X><C-O> (or <C-Space> with YCM?)
+
+" closing brackets/parens across lines
+Plugin 'rstacruz/vim-closer'
+
+" closing structures (for some languages)
+Plugin 'tpope/vim-endwise'
+
+" insert/delete brackets, parens, quotes in pair
+Plugin 'jiangmiao/auto-pairs'
+
+" comment/uncomment lines with gcc
+Plugin 'tomtom/tcomment_vim'
+
+" jump to some word after pressing <leader><leader>w/b (forward/backward)
+Plugin 'easymotion/vim-easymotion'
+
+" show git modifications in gutter
+Plugin 'airblade/vim-gitgutter'
+
+" visual indentation indicators
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" type open bracket or quote on selected region to surround (and more)
+Plugin 'tpope/vim-surround'
+
+" fuzzy file finding, activate with :Files (remap to ;)
+Plugin 'junegunn/fzf'
+nmap ; :Files<CR>
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -92,8 +120,8 @@ nmap <leader>bd :bd<cr>
 nmap <leader>e  :e 
 
 " shell commands
-nmap <leader><leader> :!
-nmap <leader><leader><leader> :!!<cr>
+nmap <leader>f :!
+nmap <leader>ff :!!<cr>
 
 " beginning/end line
 nmap B ^
