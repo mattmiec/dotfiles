@@ -15,10 +15,12 @@ Plugin 'VundleVim/Vundle.vim'
 " airline status bar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme='base16_solarized'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_theme='base16_solarized'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " solarized colorscheme
 Plugin 'altercation/vim-colors-solarized'
@@ -32,6 +34,7 @@ Plugin 'ervandew/supertab'
 " fuzzy file finding, activate with :Files (remap to ;)
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+nmap <leader>f :Files 
 nmap ; :FZF<CR>
 nmap ;; :FZF~<CR>
 
