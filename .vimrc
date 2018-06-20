@@ -45,7 +45,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
 
 " comment/uncomment lines with gcc
-Plugin 'tomtom/tcomment_vim'
+" Plugin 'tomtom/tcomment_vim'
 
 " jump to some word after pressing <leader><leader>w/b (forward/backward)
 Plugin 'easymotion/vim-easymotion'
