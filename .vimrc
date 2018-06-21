@@ -14,19 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " airline status bar
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline_theme='base16_solarized'
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-
-" solarized colorscheme
-Plugin 'altercation/vim-colors-solarized'
-syntax enable
-set background=dark
-colorscheme solarized
 
 " tab completion
 Plugin 'ervandew/supertab'
@@ -43,9 +30,6 @@ Plugin 'tpope/vim-endwise'
 
 " insert/delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
-
-" comment/uncomment lines with gcc
-" Plugin 'tomtom/tcomment_vim'
 
 " jump to some word after pressing <leader><leader>w/b (forward/backward)
 Plugin 'easymotion/vim-easymotion'
@@ -64,6 +48,12 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " type open bracket or quote on selected region to surround (and more)
 Plugin 'tpope/vim-surround'
+
+" better markdown support
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -158,14 +148,10 @@ nmap K 5<C-Y>
 set nu
 
 " syntax highlighting
-"syntax on
+syntax on
 
 " utf8 encoding
 set encoding=utf8
-
-" filetype plugins (commented out after adding vundle)
-" filetype plugin on
-" filetype indent on
 
 " indentation/wrapping
 set ai
