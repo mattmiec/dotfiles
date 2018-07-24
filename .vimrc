@@ -139,8 +139,8 @@ nmap j gj
 nmap k gk
 
 " scrolling
-nmap J 5j
-nmap K 5k
+nmap J 5<C-E>
+nmap K 5<C-Y>
 
 " INTERFACE/BEHAVIOR
 
