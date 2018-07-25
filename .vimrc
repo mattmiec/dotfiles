@@ -23,13 +23,13 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
 " closing brackets/parens across lines
-Plugin 'rstacruz/vim-closer'
+"Plugin 'rstacruz/vim-closer'
 
 " closing structures (for some languages)
-Plugin 'tpope/vim-endwise'
+"Plugin 'tpope/vim-endwise'
 
 " insert/delete brackets, parens, quotes in pair
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 
 " jump to some word after pressing <leader><leader>w/b (forward/backward)
 Plugin 'easymotion/vim-easymotion'
