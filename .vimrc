@@ -217,3 +217,6 @@ set mat=2
 
 " no (permanent) backups
 set nobackup
+
+" compile pdflatex
+nmap <leader>t :!pdflatex %<cr>
