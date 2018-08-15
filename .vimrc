@@ -34,6 +34,9 @@ Plugin 'junegunn/fzf.vim'
 " jump to some word after pressing <leader><leader>w/b (forward/backward)
 Plugin 'easymotion/vim-easymotion'
 
+" :rename command
+Plugin 'wojtekmach/vim-rename.git'
+
 " git gutter display, control
 Plugin 'airblade/vim-gitgutter'
 autocmd VimEnter * nunmap <buffer> <leader>hp
@@ -155,7 +158,7 @@ set encoding=utf8
 
 " indentation/wrapping
 set ai
-set si
+"set si
 set wrap
 
 " tabs/spaces
@@ -217,3 +220,6 @@ set mat=2
 
 " no (permanent) backups
 set nobackup
+
+" set background to dark to get correct colors in tmux
+set background=dark
