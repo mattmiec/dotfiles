@@ -223,3 +223,6 @@ set nobackup
 
 " set background to dark to get correct colors in tmux
 set background=dark
+
+" compile pdflatex
+nmap <leader>t :!pdflatex %<cr>
