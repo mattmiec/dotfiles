@@ -12,6 +12,7 @@ git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin maste
 if [ "$HOST" = "HOME" ]; then
     ln -sfv "$DOTFILES_DIR/.bashrc" ~
     ln -sfv "$DOTFILES_DIR/.profile" ~
+    ln -sfv "$DOTFILES_DIR/.bash_aliases" ~
 fi
 # always symlink these
 ln -sfv "$DOTFILES_DIR/.tmux.conf" ~

@@ -162,8 +162,8 @@ set ai
 set wrap
 
 " tabs/spaces
-"set expandtab
-"set smarttab
+set expandtab
+set smarttab
 set softtabstop=4
 set shiftwidth=4
 
